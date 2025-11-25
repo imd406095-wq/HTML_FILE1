@@ -1,0 +1,159 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #7e97f1, #a95dd4); /* skyblue gradient */
+    color: white;
+    scroll-behavior: smooth;
+    animation: fadeIn 1.2s ease-in;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    animation: slideDown 1s ease;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.hero {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 70px;
+    animation: fadeUp 1.5s ease;
+}
+
+.hero h1 span {
+    color: #000;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #ffffff;
+    color: #1E90FF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background: #1E90FF;
+    color: white;
+    transform: scale(1.1);
+}
+
+.card {
+    width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 18px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    animation: fadeCard 2s ease;
+}
+
+.profile-img {
+    width: 200px;
+    height: 230px;
+    object-fit: cover;      /* keeps image cropped perfectly */
+    border-radius: 50%;     /* makes perfect circle */
+    border: 5px solid #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.6); /* glowing effect */
+    transition: 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.skill-box span {
+    display: inline-block;
+    background: #ffffff;
+    color: #1E90FF;
+    padding: 10px 18px;
+    margin: 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.skill-box span:hover {
+    transform: translateY(-5px);
+    background: #000;
+    color: white;
+}
+
+form input, form textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 12px;
+    border: none;
+}
+
+.social a {
+    margin: 10px;
+    font-size: 32px;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    color: #000;
+    transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 500;
+}
+
+/* animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-70px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeCard {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
